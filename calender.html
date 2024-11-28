@@ -20,26 +20,26 @@
             <a href="architecture.html">ARCHITECTURE</a>
             <a href="calender.html">CALENDER</a>
             <a href="contact.html">CONTACT</a>
-            <a href="#">ABOUT </a>
+            <a href="about.html">ABOUT </a>
         </li>
     </ul>   
 </header>
 <main>
     <div class="main_page">
         <p>VIDEO SCHEDULE</p>
-        <p>DIORAMA</p>
+        <p>2024</p>
+        <a href="#" onclick="openPopup();"></a>
     </div>
     <div class="section_1">
-        <div>
-            <p class="title">
-                자신의 스크린에서만 즐기던 콘텐츠를 디오라마를 통해 현장감과 감정을다 같이 나누고 소비하며 공동 경험을 할 수 있는 교감의 장을 형성
-            </p>
-            <p class="content">
-                자신의 스크린에서만 즐기던 콘텐츠를 디오라마를 통해 현장감과 감정을 다 같이 나누고 소비하며 공동경험을 할 수 있는 교감의 장을 형성
-            </p>
-        </div>
+        UPCOMING STREAMING
     </div>
     <div class="cal"></div>
+
+    <div id="overlay" onclick="closePopup()"></div>
+    <section id="popupSection">
+        <div></div>
+        <div class="close-btn" onclick="closePopup()"></div>
+    </section>
 </main>
 <footer>
     <ul>
@@ -57,5 +57,19 @@
     </ul>
     
 </footer>
+
+<script>
+    // 팝업 열기 함수
+    function openPopup() {
+        document.getElementById('popupSection').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    // 팝업 닫기 함수
+    function closePopup() {
+        document.getElementById('popupSection').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
 </body>
 </html>
