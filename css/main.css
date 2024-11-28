@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-@font-face{
-    font-family:"helvetica-43-light-extended";
-    src:url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("woff"),
-    url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("opentype"),
-    url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -26,24 +19,27 @@ a {
 }
 
 body {
-    background-color: #151515;
+    background-color: #000;
     position: relative;
+    box-sizing: border-box;
 }
 
 header {
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
     width: 1800px;
     height: 80px;
-    position: fixed;
     margin: 0 auto;
     left: 0;
     right: 0;
     box-sizing: border-box;
     z-index: 1000;
-    background-color: rgba(21, 21, 21, 1);
-}
-
-.nav {
-    display: flex;
 }
 
 .nav h1 {
@@ -95,8 +91,7 @@ header {
 
 main {
     color: #888;
-    box-sizing: border-box;
-    padding-top: 160px;
+    padding-top: 80px;
     box-sizing: border-box;
 }
 
@@ -121,6 +116,10 @@ main span {
     line-height: 50px;
     text-transform: uppercase;
     overflow: hidden;
+}
+
+.txt_b:hover {
+    animation: none;
 }
 
 .inner-headings .ani {
@@ -269,6 +268,7 @@ main span {
     font-size: 200px;
     line-height: 180px;
     display: flex;
+    font-weight: 300;
 }
 
 .txt:hover {
@@ -334,31 +334,39 @@ main span {
 }
 
 .section_2 div {
-    width: 200px;
-    height: 200px;
-    background: url(../img/touch.png) center no-repeat;
-    animation: rot_txt linear 6s infinite;
-    transform-origin: 50% 50%;
+    width: 100px;
+    height: 100px;
+    background: url(../img/calender_icon.png) center no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-size: 60%;
+    margin: 20px 0 0 -500px;
 }
 
 @keyframes rot_txt {
     100% {transform:rotate(360deg);}
 }
 
-.section_2 a {
+.calbt {
     color: #fff;
     display: block;
-    width: 125px;
-    height: 125px;
+    width: 250px;
+    height: 250px;
+    background: url(../img/touch.png) center no-repeat;
+    background-size: 75%;
     border-radius: 50%;
-    background: url(../img/calender_icon.png) center no-repeat;
-    border: 3px solid #fff;
     text-indent: -9999px;
-    margin: 18% auto 0;
+    animation: rot_txt linear 6s infinite;
+    transform-origin: 50% 50%;
+    margin: -80px 0 0 -78px;
 }
 
-.section_2 a:hover {
+.section_2 div:has(.calbt:hover) {
     background: url(../img/calender_icon_hover.png) center no-repeat;
+    background-size: 110%;
+    animation: none;
+
 }
 
 .ad {
