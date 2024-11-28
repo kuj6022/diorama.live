@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-@font-face{
-    font-family:"helvetica-43-light-extended";
-    src:url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("woff"),
-    url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("opentype"),
-    url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -27,17 +20,26 @@ a {
 
 body {
     background-color: #000;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 header {
-    width: 1800px;
-    height: 80px;
-    margin: 0 auto 70px auto;
-    box-sizing: border-box;
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1000;
 }
 
 .nav {
     display: flex;
+    width: 1800px;
+    height: 80px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 .nav h1 {
@@ -89,17 +91,16 @@ header {
 
 .section_1 {
     font-family: "Montserrat", sans-serif;
-    font-size: 130px;
-    line-height: 105px;
+    font-size: 155px;
+    line-height: 145px;
     width: 1800px;
-    margin: auto;
+    margin: 0 auto;
     border-bottom: 1px solid #fff;
+    padding-top: 250px;
     padding-bottom: 60px;
-    margin-bottom: 80px;
-}
-
-.section_1 .bt {
-    color: #555;
+    margin-bottom: 100px;
+    font-weight: lighter;
+    position: relative
 }
 
 .section_1 .bt2 {
@@ -108,7 +109,32 @@ header {
 
 .section_1 .bt2:hover {
     color: #3653FB;
+    font-weight: 300;
 }
+
+.section_1 .bt2 span {
+    color: #90FE93;
+}
+
+.section_1 .bt3 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 25px;
+    color: #000;
+    line-height: 40px;
+    padding: 2px 15px;
+    background-color: #90FE93;
+    transform: translate(0%,-50%);
+    font-weight: 300;
+}
+
+.section_1 .bt3:hover {
+    color: #fff;
+    background-color: #3653FB;
+}
+
+
 
 .section_2 {
     width: 1800px;
@@ -123,7 +149,7 @@ header {
     background-color: #151515;
     width: 440px;
     height: 608px;
-    padding: 50px;
+    padding: 40px 50px;
     opacity: 0;
     transform: rotate(-720deg);
     transition: all 1.2s;
@@ -157,18 +183,37 @@ header {
     width: 1800px;
     margin: auto;
     font-family: "Montserrat", sans-serif;
+    position: relative;
+}
+
+.section_3 .bt3 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 25px;
+    color: #000;
+    line-height: 40px;
+    padding: 2px 15px;
+    background-color: #fff;
+    transform: translate(0%,-130%);
+    font-weight: 300;
 }
 
 .section_3 a {
     color: #888;
     font-size: 70px;
     line-height: 60px;
+    font-weight: 200;
 }
 
 .section_3 a:hover {
     color: #fff;
+    font-weight: 300;
 }
 
+.section_3 .bt3:hover {
+    color: #000;
+}
 
 
 
