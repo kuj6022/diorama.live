@@ -269,8 +269,6 @@ main span {
     line-height: 180px;
     display: flex;
     font-weight: 300;
-    display: inline-block;
-    white-space: nowrap;
     with: 700px;
 }
 
