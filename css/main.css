@@ -271,6 +271,7 @@ main span {
     font-weight: 300;
     display: inline-block;
     white-space: nowrap;
+    with: 700px;
 }
 
 .txt:hover {
