@@ -18,6 +18,10 @@ a {
     display: none;
 }
 
+html {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #000;
     position: relative;
@@ -91,7 +95,7 @@ header {
 
 main {
     color: #888;
-    padding-top: 500px;
+    padding-top: 80px;
     box-sizing: border-box;
 }
 
@@ -314,13 +318,13 @@ main span {
 
 .line {
     border-bottom: 2px solid #C0C0C0;
-    margin: 50px auto;
+    margin: 30px auto;
     width: 1800px;
     
 }
 
 .section_2 {
-    width: 1800px;
+    width: 1750px;
     margin: 0 auto 100px auto;
     display: flex;
     justify-content: space-between;
@@ -338,6 +342,7 @@ main span {
     width: 100px;
     height: 100px;
     background: url(../img/calender_icon.png) center no-repeat;
+    background-position-y: 19px;
     background-size: contain;
     border-radius: 50%;
     border: 3px solid #fff;
@@ -365,6 +370,7 @@ main span {
 
 .section_2 div:has(.calbt:hover) {
     background: url(../img/calender_icon_hover.png) center no-repeat;
+    background-position-y: -7px;
     background-size: 110%;
     animation: none;
 
@@ -374,7 +380,6 @@ main span {
     width: 1700px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
 }
 
 .ad a {
@@ -435,3 +440,4 @@ footer ul {
     color: #fff;
     cursor: pointer;
 }
+
