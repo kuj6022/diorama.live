@@ -269,6 +269,7 @@ main span {
     line-height: 180px;
     display: flex;
     font-weight: 300;
+    display: block;
 }
 
 .txt:hover {
