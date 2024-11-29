@@ -27,7 +27,7 @@ body {
 header {
     position: fixed;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, .7);
     z-index: 1000;
 }
 
