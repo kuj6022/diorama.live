@@ -157,14 +157,14 @@ main {
 
 .sub {
     margin-bottom: 54px;
-    font-family: pretendard;
+    font-family: "pretendard", sans-serif;
 }
 
 .title {
     width: 620px;
     line-height: 60px;
     margin-bottom: 30px;
-    font-family: pretendard;
+    font-family: "pretendard", sans-serif;
 }
 
 .content {
