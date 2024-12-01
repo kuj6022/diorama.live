@@ -138,13 +138,56 @@ main {
     
 }
 
-.cal {
-    width: 1800px;
-    height: 1050px;
-    margin: 0 auto;
-    background: no-repeat url(../img/calender.png);
-    margin-bottom: 180px;
-}
+  .calendar {
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 20px;
+    max-width: 1400px;
+    margin-left: 400px;
+    white-space: nowrap;
+
+  }
+
+  .day {
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+  }
+
+  .day .date {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .event {
+    margin-top: -15px;
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: "pretendard", sans-serif;
+  }
+
+  .event span {
+    color: #fff;
+    background-color: #3653FB;
+    font-size: 9px;
+    padding: 0 3px;
+    border-radius: 3.5px;
+  }
+
+  @media (max-width: 768px) {
+    .calendar {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .day {
+      height: auto;
+    }
+  }
 
 #popupSection {
     display: none; /* 처음에는 숨김 */
