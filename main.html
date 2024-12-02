@@ -87,7 +87,7 @@
                 라는 경험을 선사하는 것이 저희 프로젝트의 목표입니다.
             </p>
             <div>
-                <a href="calender.html" class="calbt">CALENDER</a>
+                <a onclick="openPopup();" class="calbt">CALENDER</a>  
             </div>
             
         </li>
@@ -95,6 +95,10 @@
             <a href="#">ADVERTISEMENT</a>
         </li>
     </ul>
+    <div id="overlay" onclick="closePopup()"></div>
+    <section id="popupSection">
+    <div></div>
+    <div class="close-btn" onclick="closePopup()"></div>
 </main>
 <footer>
     <ul>
@@ -112,5 +116,18 @@
     </ul>
     
 </footer>
+<script>
+    // 팝업 열기 함수
+    function openPopup() {
+        document.getElementById('popupSection').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    // 팝업 닫기 함수
+    function closePopup() {
+        document.getElementById('popupSection').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
 </body>
 </html>
