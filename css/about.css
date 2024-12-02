@@ -154,6 +154,10 @@ header {
     width: 500px;  
 }
 
+.ex a {
+    color: #fff;
+}
+
 .section_1 .pt {
     background-image: url(../img/yg.png);
     background-repeat: no-repeat;
