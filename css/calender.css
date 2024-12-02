@@ -38,6 +38,13 @@ header {
 
 .nav {
     display: flex;
+    width: 1800px;
+    height: 80px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 .nav h1 {
