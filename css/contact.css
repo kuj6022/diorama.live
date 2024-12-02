@@ -130,8 +130,9 @@ header {
 }
 
 .section_1 .bt3:hover {
-    color: #fff;
-    background-color: #3653FB;
+    color: #90FE93;
+    background-color: #000;
+    border: 1px solid #fff;
 }
 
 
@@ -147,7 +148,7 @@ header {
 
 .section_2 li {
     background-color: #151515;
-    width: 440px;
+    width: 430px;
     height: 608px;
     padding: 40px 50px;
     opacity: 0;
@@ -156,7 +157,7 @@ header {
 }
 
 .section_2 li:hover {
-    border: 1px solid #c0c0c0;
+    border: 3px solid #c0c0c0;
 }
 
 .section_2 p {
@@ -184,6 +185,7 @@ header {
     margin: auto;
     font-family: "Montserrat", sans-serif;
     position: relative;
+    line-height: 38px;
 }
 
 .section_3 .bt3 {
