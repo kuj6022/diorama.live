@@ -108,25 +108,14 @@ main {
     width: 1800px;
     text-align: right;
     font-size: 155px;
+    font-weight: 300;
 }
 
 .main_page p:nth-of-type(2) {
     width: 1800px;
     font-size: 155px;
     text-align: right;
-    font-weight: 300;
-}
-
-.main_page a {
-    display: block;
-    width: 125px;
-    height: 125px;
-    background-color: #90FE93;
-    border-radius: 50%;
-    position: absolute;
-    top: 550px;
-    right: 0;
-
+    
 }
 
 .section_1 {
@@ -135,7 +124,19 @@ main {
     font-size: 30px;
     border-bottom: 1px solid #fff;
     padding-bottom: 10px;
-    
+    font-family: "Montserrat", sans-serif;
+}
+
+.calwrap {
+    width: 1800px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.month {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
 }
 
   .calendar {
@@ -155,7 +156,7 @@ main {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 25px;
     height: 150px;
   }
 
@@ -165,19 +166,34 @@ main {
   }
 
   .event {
-    margin-top: -15px;
     font-size: 15px;
     font-weight: lighter;
     font-family: "pretendard", sans-serif;
   }
 
-  .event span {
+  .event span:not(.today) {
     color: #fff;
     background-color: #3653FB;
-    font-size: 9px;
+    font-size: 12px;
     padding: 0 3px;
     border-radius: 3.5px;
-  }
+    }
+
+    .sun {
+        color: red;
+    }
+
+    .todai {
+        color: #90FE93;
+    }
+
+    .today {
+        background-color: #90FE93;
+        color: #fff;
+        font-size: 12px;
+        padding: 0 3px;
+        border-radius: 3.5px;
+    }
 
   @media (max-width: 768px) {
     .calendar {
@@ -260,6 +276,7 @@ footer ul {
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 18px;
+    
 }
 
 .ft_bt a {
