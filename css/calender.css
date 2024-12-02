@@ -103,7 +103,7 @@ main {
     width: 1800px;
     height: 50vh;
     font-family: "Montserrat", sans-serif;
-    margin: 0 auto 210px;
+    margin: 0 auto 410px;
     font-weight: lighter;
     padding-top: 250px;
     position: relative;
@@ -121,7 +121,8 @@ main {
 .main_page p:nth-of-type(2) {
     width: 1800px;
     font-size: 155px;
-    text-align: right;  
+    text-align: right;
+    
 }
 
 .section_1 {
