@@ -40,7 +40,7 @@
                 예약 / 가격 문의 <br>
                 캘린더
             </p>
-            <a href="#">더보기 &rsaquo;</a>
+            <a onclick="openPopup();">더보기 &rsaquo;</a>
         </li>
         <li>
             <p>02.</p>
@@ -49,7 +49,7 @@
                 예약 / 가격 문의 <br>
                 시간
             </p>
-            <a href="#">더보기 &rsaquo;</a>
+            <a onclick="openPopup();">더보기 &rsaquo;</a>
         </li>
         <li>
             <p>03.</p>
@@ -58,7 +58,7 @@
                 채팅 내역 <br>
                 문의
             </p>
-            <a href="#">더보기 &rsaquo;</a>
+            <a onclick="openPopup();">더보기 &rsaquo;</a>
         </li>
         <li>
             <p>04.</p>
@@ -67,7 +67,7 @@
                 연락처 <br>
                 이메일
             </p>
-            <a href="#">더보기 &rsaquo;</a>
+            <a onclick="openPopup();">더보기 &rsaquo;</a>
         </li>
     </ul>
     <ul class="section_3">
@@ -76,6 +76,10 @@
         <li><a href="#">EXPRIENCE</a></li>
         <li><a href="#" class="bt3"> 모바일 QR ></a></li>
     </ul>
+    <div id="overlay" onclick="closePopup()"></div>
+    <section id="popupSection">
+    <div></div>
+    <div class="close-btn" onclick="closePopup()"></div>
 
 </main>
 <footer>
@@ -110,6 +114,18 @@
     observer.observe(li[2])
     observer.observe(li[3])
 
+
+ // 팝업 열기 함수
+ function openPopup() {
+        document.getElementById('popupSection').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    // 팝업 닫기 함수
+    function closePopup() {
+        document.getElementById('popupSection').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
 
 
 </script>
