@@ -121,8 +121,7 @@ main {
 .main_page p:nth-of-type(2) {
     width: 1800px;
     font-size: 155px;
-    text-align: right;
-    
+    text-align: right;  
 }
 
 .section_1 {
