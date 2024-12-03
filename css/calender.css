@@ -146,7 +146,7 @@ main {
     font-family: "Montserrat", sans-serif;
 }
 
-  .calendar {
+.calendar {
     color: #fff;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -156,7 +156,7 @@ main {
     margin-left: 400px;
     white-space: nowrap;
 
-  }
+}
 
   .day {
     padding: 10px;
@@ -184,14 +184,6 @@ main {
     font-size: 12px;
     padding: 0 3px;
     border-radius: 3.5px;
-    }
-
-    .sun {
-        color: red;
-    }
-
-    .todai {
-        color: #90FE93;
     }
 
     .today {
