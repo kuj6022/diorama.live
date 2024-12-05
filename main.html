@@ -11,7 +11,7 @@
 <body>
 <header>    
     <ul class="nav">
-        <li><h1><a href="#">디오라마</a></h1></li>
+        <li><h1 id="clickableH1"><a href="#">디오라마</a></h1></li>
         <li class="bt">
             <a href="main.html">MAIN</a>
             <a href="architecture.html">ARCHITECTURE</a>
@@ -19,14 +19,15 @@
             <a href="contact.html">CONTACT</a>
             <a href="about.html">ABOUT </a>
         </li>
-    </ul>   
+    </ul>
+    <div class="menu-toggle" id="menuToggle">Menu</div>   
 </header>
 <main>
     <ul>
         <li class="txt" >
             <p class="txt_s t1">2024 graduation exhibition </p>
             <div class="outer-headings">
-                <div class="inner-headings">
+                <div class="inner-headings dio">
                     <p class="txt_b ani"><span class="d">D</span>IORAMA</p>
                     <p class="txt_b ani"><span class="d">D</span>IORAMA</p>
                     <p class="txt_b ani"><span class="d">D</span>IORAMA</p>
@@ -86,7 +87,7 @@
                 영화관과 소극장 같이 극장 체험의 장점인 '집에서 자신의 스크린으로 즐기던 콘텐츠를 다 같이 나누고 소비하며 공동체 의식을 형성한다.' <br>
                 라는 경험을 선사하는 것이 저희 프로젝트의 목표입니다.
             </p>
-            <div>
+            <div class="calbtw">
                 <a onclick="openPopup();" class="calbt">CALENDER</a>  
             </div>
             
@@ -128,6 +129,45 @@
         document.getElementById('popupSection').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
     }
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const nav = document.querySelector(".nav");
+    const overlay = document.getElementById("overlay");
+
+    
+
+    menuToggle.addEventListener("click", () => {
+        const isMenuOpen = nav.classList.toggle("active");
+        overlay.classList.toggle("active");
+
+        // 버튼 텍스트 변경
+        menuToggle.textContent = isMenuOpen ? "Close" : "Menu";
+
+        // 배경 색상 전환
+        document.body.style.backgroundColor = isMenuOpen ? "#000" : "#000";
+
+        // 스크롤 차단
+        body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    });
+
+    // 오버레이 클릭 시 메뉴 닫기
+    overlay.addEventListener("click", () => {
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
+        menuToggle.textContent = "Menu";
+        document.body.style.backgroundColor = "#000";
+        body.style.overflow = "auto"; // 스크롤 복구
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const h1 = document.getElementById("clickableH1");
+    h1.addEventListener("click", () => {
+        window.location.href = "../main.html"; // 이동할 URL
+    });
+});
 </script>
 </body>
 </html>
