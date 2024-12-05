@@ -14,7 +14,7 @@
 <body>
 <header>    
     <ul class="nav">
-        <li><h1><a href="main.html">디오라마</a></h1></li>
+        <li><h1 id="clickableH1"><a href="main.html">디오라마</a></h1></li>
         <li class="bt">
             <a href="main.html">MAIN</a>
             <a href="architecture.html">ARCHITECTURE</a>
@@ -22,6 +22,7 @@
             <a href="contact.html">CONTACT</a>
             <a href="about.html">ABOUT </a>
         </li>
+        <div class="menu-toggle" id="menuToggle">Menu</div>
     </ul>   
 </header>
 <main>
@@ -199,6 +200,46 @@
         document.getElementById('popupSection').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
     }
+
+    
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const nav = document.querySelector(".nav");
+    const overlay = document.getElementById("overlay");
+
+    
+
+    menuToggle.addEventListener("click", () => {
+        const isMenuOpen = nav.classList.toggle("active");
+        overlay.classList.toggle("active");
+
+        // 버튼 텍스트 변경
+        menuToggle.textContent = isMenuOpen ? "Close" : "Menu";
+
+        // 배경 색상 전환
+        document.body.style.backgroundColor = isMenuOpen ? "#000" : "#000";
+
+        // 스크롤 차단
+        body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    });
+
+    // 오버레이 클릭 시 메뉴 닫기
+    overlay.addEventListener("click", () => {
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
+        menuToggle.textContent = "Menu";
+        document.body.style.backgroundColor = "#000";
+        body.style.overflow = "auto"; // 스크롤 복구
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const h1 = document.getElementById("clickableH1");
+    h1.addEventListener("click", () => {
+        window.location.href = "../main.html"; // 이동할 URL
+    });
+});
 </script>
 </body>
 </html>
